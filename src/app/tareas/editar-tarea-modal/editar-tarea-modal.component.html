@@ -1,0 +1,16 @@
+<div class="container">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Nombre Tarea</mat-label>
+    <input matInput [value]="data.nombre" [(ngModel)]="data.nombre" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Tiempo estimado de la tarea</mat-label>
+    <input matInput [value]="data.tiempo" [(ngModel)]="data.tiempo" />
+  </mat-form-field>
+  <div align="center">
+    <button mat-raised-button color="warn" (click)="cancelModal()">
+      Cancelar
+    </button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+  </div>
+</div>
